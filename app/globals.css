@@ -1,0 +1,41 @@
+:root {
+  --brand-primary: #268449;
+  --brand-primary-dark: #103d2c;
+  --brand-subtle: #e6f3e1;
+  --surface-app: #fdfbf3;
+  --surface-card: #fff;
+  --border-subtle: #e5ebe2;
+  --text-primary: #153e2c;
+  --text-secondary: #738376;
+  font-family: Arial, 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-primary);
+  background: var(--surface-app);
+}
+*, *::before, *::after {box-sizing: border-box}
+html {scroll-behavior: smooth}
+body {margin: 0; min-width: 320px}
+a {color: inherit}
+button, input {font: inherit}
+.site-container {width: min(1180px, calc(100% - 48px)); margin-inline: auto}
+.site-announcement {min-height: 28px; padding: 5px 14px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 25px; background: #103c2b; color: #e6f5d9; text-align: center; font-weight: 700; font-size: 11px}
+.site-announcement-extra {color: #c6d8c8; font-weight: 400}
+.site-header {position: relative; z-index: 2000; background: #fdfbf3; border-bottom: 1px solid #edf0e8}
+.site-nav {display: flex; align-items: center; gap: 24px; min-height: 74px}
+.site-brand {display: inline-flex; align-items: center; flex-shrink: 0; text-decoration: none}
+.site-brand-logo {width: 136px; height: auto; display: block}
+.site-nav-links {display: flex; align-items: center; justify-content: center; flex: 1; gap: clamp(12px,2vw,28px)}
+.site-nav-links a {white-space: nowrap; text-decoration: none; font-size: 13px; font-weight: 700; color: #2a4736}
+.site-nav-links a:hover, .site-account-link:hover {color: #23864e}
+.site-nav-actions {display: flex; align-items: center; gap: 13px}
+.site-account-link {font-size: 12px; text-decoration: none; font-weight: 700; white-space: nowrap}
+.site-settings-link {display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; text-decoration: none}
+.site-settings-link:hover {background: #e7f4e6}
+.site-cart {display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; border-radius: 99px; padding: 0 16px; color: white; background: #103d2c; font-size: 13px; font-weight: 750; white-space: nowrap; text-decoration: none}
+.site-cart:hover {background: #266b43}
+.site-menu-toggle {display: none; place-items: center; width: 37px; height: 37px; border: 0; border-radius: 50%; background: #ecf4e9; color: #103d2c; cursor: pointer}
+.site-mobile-menu {position: absolute; top: 100%; left: 0; right: 0; background: #fdfbf3; box-shadow: 0 20px 35px #103d2c24; border-top: 1px solid #e5ede2}
+.site-mobile-menu nav {display: grid; padding: 10px 24px 22px}
+.site-mobile-menu a {padding: 12px 4px; border-bottom: 1px solid #e7ede4; font-size: 14px; font-weight: 650; text-decoration: none}
+@media(max-width: 1020px){.site-nav-links {gap: 13px}.site-nav-links a {font-size: 12px}.site-nav {gap: 15px}.site-brand-logo {width: 116px}}
+@media(max-width: 790px){.site-nav-links,.site-account-link {display: none}.site-nav {justify-content: space-between; min-height: 65px}.site-nav-actions {margin-left: auto}.site-menu-toggle {display: grid}.site-brand-logo {width: 112px}.site-announcement-extra {display: none}}
+@media(max-width: 420px){.site-container {width: calc(100% - 28px)}.site-cart {min-width: 37px; padding: 0 11px}.site-cart span {display: none}.site-brand-logo {width: 104px}.site-nav-actions {gap: 7px}}

@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Prefix Fudo models to reduce migration/name collisions when merged with team code.
+// This is the shared identity: group orders should reference FudoUser.id.
+model FudoUser {
+  id               String                 @id @default(cuid())
+  name             String
+  email            String                 @unique
+  phone            String?
+  passwordHash     String
+  tokenVersion     Int                    @default(0)
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+  preferences      FudoNotificationPrefs?
+  notifications    FudoNotification[]
+  tickets          FudoSupportTicket[]
+  resetTokens      FudoPasswordResetToken[]
+  emailChangeTokens FudoEmailChangeToken[]
+}
+
+model FudoNotificationPrefs {
+  userId      String    @id
+  discounts   Boolean   @default(true)
+  promotions  Boolean   @default(true)
+  orderStatus Boolean   @default(true)
+  updatedAt   DateTime  @updatedAt
+  user        FudoUser  @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum FudoNotificationType {
+  DISCOUNT
+  PROMOTION
+  ORDER_STATUS
+}
+
+model FudoNotification {
+  id        String               @id @default(cuid())
+  userId    String
+  type      FudoNotificationType
+  title     String
+  body      String
+  href      String?
+  readAt    DateTime?
+  createdAt DateTime             @default(now())
+  user      FudoUser             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, createdAt])
+}
+
+model FudoSupportTicket {
+  id        String   @id @default(cuid())
+  userId    String
+  subject   String
+  message   String
+  status    String   @default("OPEN")
+  createdAt DateTime @default(now())
+  user      FudoUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, createdAt])
+}
+
+model FudoPasswordResetToken {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      FudoUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+}
+
+model FudoEmailChangeToken {
+  id        String   @id @default(cuid())
+  userId    String
+  newEmail  String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      FudoUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+}
+
+model FudoRateLimit {
+  key       String   @id
+  count     Int      @default(0)
+  resetAt   DateTime
+}

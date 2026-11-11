@@ -1,0 +1,152 @@
+/* Self-contained styling. Override --fudo-* variables in the shared design system.
+   No global body, heading, or button selectors: safe to merge with other Fudo pages. */
+.fudo-root {
+  --fudo-primary: var(--brand-primary, #24734e);
+  --fudo-primary-dark: var(--brand-primary-dark, #195a3d);
+  --fudo-tint: var(--brand-subtle, #ecf6ef);
+  --fudo-bg: var(--surface-app, #f7f9f7);
+  --fudo-surface: var(--surface-card, #fff);
+  --fudo-border: var(--border-subtle, #e1e9e3);
+  --fudo-text: var(--text-primary, #17271d);
+  --fudo-muted: var(--text-secondary, #68786e);
+  --fudo-shadow: 0 4px 24px rgba(18, 61, 36, .045);
+  min-height: 100vh; background: var(--fudo-bg); color: var(--fudo-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px; line-height: 1.55;
+}
+.fudo-root *, .fudo-root *::before, .fudo-root *::after { box-sizing: border-box; }
+.fudo-root a { color: var(--fudo-primary); text-decoration: none; }
+.fudo-root a:hover { text-decoration: underline; }
+.fudo-root button, .fudo-root input, .fudo-root textarea { font: inherit; }
+.fudo-root button { cursor: pointer; }
+.fudo-root button:disabled { cursor: wait; opacity: .7; }
+.fudo-root h1, .fudo-root h2, .fudo-root h3, .fudo-root p { margin-top: 0; }
+.fudo-root h1 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -.04em; line-height: 1.2; margin-bottom: 12px; }
+.fudo-root h2 { font-size: 20px; letter-spacing: -.025em; line-height: 1.25; margin-bottom: 12px; }
+.fudo-topbar { background: #fff; border-bottom: 1px solid var(--fudo-border); }
+.fudo-topbar-inner { max-width: 1140px; margin: auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.fudo-logo { display: inline-flex; gap: 9px; align-items: center; color: var(--fudo-text) !important; font-weight: 830; font-size: 24px; letter-spacing: -.05em; }
+.fudo-logo:hover { text-decoration: none !important; }
+.fudo-logo-icon { display: inline-grid; width: 34px; height: 34px; place-items: center; background: var(--fudo-primary); color: #fff; border-radius: 11px; }
+.fudo-toplinks { display: flex; gap: 20px; }
+.fudo-toplink { display: inline-flex; align-items: center; gap: 7px; color: var(--fudo-muted) !important; font-weight: 600; }
+.fudo-main { max-width: 1140px; min-height: calc(100vh - 151px); margin: auto; padding: 36px 24px 74px; }
+.fudo-footer { text-align: center; color: var(--fudo-muted); padding: 15px 20px 27px; font-size: 12px; }
+.fudo-eyebrow { display: inline-block; color: var(--fudo-primary); font-weight: 750; font-size: 12px; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 10px; }
+.fudo-muted { color: var(--fudo-muted); }
+.fudo-small { font-size: 13px; }
+.fudo-center { text-align: center; }
+.fudo-hint { font-size: 14px; margin: 7px 0 0; color: var(--fudo-muted); }
+.fudo-auth-card { background: var(--fudo-surface); border: 1px solid var(--fudo-border); border-radius: 22px; box-shadow: var(--fudo-shadow); max-width: 486px; padding: 40px; margin: 25px auto; }
+.fudo-auth-card > .fudo-muted { margin-bottom: 27px; }
+.fudo-form { display: flex; flex-direction: column; gap: 16px; }
+.fudo-field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 680; }
+.fudo-input { background: #fff; border: 1px solid #d2ded5; width: 100%; border-radius: 10px; padding: 11px 13px; font-size: 15px; color: var(--fudo-text); outline: none; min-height: 45px; }
+.fudo-input:focus { border-color: var(--fudo-primary); box-shadow: 0 0 0 3px #23734e20; }
+.fudo-input::placeholder { color: #a0aaa3; }
+.fudo-textarea { min-height: 125px; resize: vertical; }
+.fudo-btn { padding: 11px 17px; border-radius: 10px; font-weight: 720; border: 1px solid transparent; min-height: 45px; }
+.fudo-btn-primary { background: var(--fudo-primary); color: #fff; }
+.fudo-btn-primary:hover:not(:disabled) { background: var(--fudo-primary-dark); }
+.fudo-line { display: flex; align-items: center; }
+.fudo-line-end { justify-content: flex-end; font-size: 13px; }
+.fudo-alert { background: #fbf4e6; border: 1px solid #f2dfbc; padding: 11px 13px; border-radius: 10px; font-size: 13px; margin-bottom: 4px; }
+.fudo-alert-ok { background: #e6f5e9; border-color: #b5d9bf; color: #25643d; }
+.fudo-alert-err { background: #fff0f0; border-color: #f1c5c5; color: #a82e2e; }
+.fudo-checkbox { display: flex; align-items: flex-start; gap: 10px; color: var(--fudo-muted); font-size: 13px; cursor: pointer; }
+.fudo-checkbox input { accent-color: var(--fudo-primary); margin-top: 4px; }
+.fudo-settings-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 30px; align-items: start; }
+.fudo-side { background: #fff; padding: 23px 15px; border: 1px solid var(--fudo-border); border-radius: 16px; box-shadow: var(--fudo-shadow); }
+.fudo-side h2 { padding: 0 11px 16px; margin: 0; font-size: 17px; }
+.fudo-nav { display: flex; flex-direction: column; gap: 4px; }
+.fudo-nav-link { display: flex; width: 100%; gap: 12px; align-items: center; padding: 11px 12px; border: 0; border-radius: 9px; background: transparent; color: var(--fudo-text) !important; text-decoration: none !important; text-align: left; font-size: 14px; font-weight: 610; }
+.fudo-nav-link:hover { background: var(--fudo-tint); color: var(--fudo-primary) !important; }
+.fudo-nav-logout { color: #b43b3b !important; }
+.fudo-nav-logout:hover { background: #fff0f0; color: #a02a2a !important; }
+.fudo-settings-content { display: flex; flex-direction: column; gap: 21px; min-width: 0; }
+.fudo-pagehead { margin: 5px 0 2px; }
+.fudo-pagehead p { color: var(--fudo-muted); margin-bottom: 0; }
+.fudo-panel { background: var(--fudo-surface); border: 1px solid var(--fudo-border); border-radius: 16px; padding: 26px; box-shadow: var(--fudo-shadow); }
+.fudo-panel > h2 { display: flex; align-items: center; gap: 10px; }
+.fudo-panel > h2 svg { color: var(--fudo-primary); }
+.fudo-stack { display: flex; flex-direction: column; gap: 27px; }
+.fudo-stack > div > .fudo-muted { margin-bottom: 20px; }
+.fudo-stack .fudo-form { max-width: 520px; }
+.fudo-panel-divider { height: 1px; width: 100%; background: var(--fudo-border); }
+.fudo-current-email { display: inline-block; padding: 8px 12px; border-radius: 9px; background: var(--fudo-bg); font-weight: 600; }
+.fudo-menu-item { display: flex; gap: 16px; align-items: center; padding: 19px 2px; color: var(--fudo-text) !important; text-decoration: none !important; border-bottom: 1px solid var(--fudo-border); }
+.fudo-menu-item:first-child { padding-top: 4px; }
+.fudo-menu-item:last-child { border-bottom: 0; padding-bottom: 4px; }
+.fudo-menu-item:hover .fudo-menu-text strong { color: var(--fudo-primary); }
+.fudo-menu-icon { display: grid; place-items: center; width: 45px; height: 45px; flex: 0 0 45px; border-radius: 12px; background: var(--fudo-tint); color: var(--fudo-primary); }
+.fudo-menu-text { display: flex; flex: 1; min-width: 0; flex-direction: column; }
+.fudo-menu-text strong { font-size: 15px; }
+.fudo-menu-text small { color: var(--fudo-muted); font-size: 13px; }
+.fudo-menu-item > svg { color: #8a9990; }
+.fudo-switch-row { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--fudo-border); padding: 15px 0; align-items: center; cursor: pointer; }
+.fudo-switch-row:first-child { padding-top: 0; }
+.fudo-switch-row:last-of-type { margin-bottom: 7px; border-bottom: 0; }
+.fudo-switch-row span { display: flex; flex-direction: column; }
+.fudo-switch-row strong { font-size: 14px; }
+.fudo-switch-row small { color: var(--fudo-muted); }
+.fudo-switch-row input { appearance: none; width: 42px; height: 24px; background: #ccd6d0; border-radius: 40px; position: relative; flex: 0 0 42px; cursor: pointer; transition: background .2s; }
+.fudo-switch-row input::after { content: ""; position: absolute; width: 18px; height: 18px; top: 3px; left: 3px; border-radius: 50%; background: white; box-shadow: 0 1px 3px #0002; transition: transform .2s; }
+.fudo-switch-row input:checked { background: var(--fudo-primary); }
+.fudo-switch-row input:checked::after { transform: translateX(18px); }
+.fudo-switch-row input:focus-visible { outline: 3px solid #24734e60; outline-offset: 3px; }
+.fudo-empty { display: flex; padding: 35px 12px; align-items: center; gap: 8px; flex-direction: column; color: var(--fudo-muted); text-align: center; }
+.fudo-empty svg { color: var(--fudo-primary); }
+.fudo-empty strong { color: var(--fudo-text); }
+.fudo-notification-list, .fudo-tickets { list-style: none; padding: 0; margin: 0; }
+.fudo-notification { display: flex; justify-content: space-between; gap: 15px; padding: 18px 0; border-top: 1px solid var(--fudo-border); }
+.fudo-notification-main { display: flex; flex-direction: column; gap: 5px; }
+.fudo-notification-main p { margin: 0; }
+.fudo-notification-main small { color: var(--fudo-muted); }
+.fudo-notification-main a { font-size: 13px; }
+.fudo-unread { border-left: 3px solid var(--fudo-primary); padding-left: 12px; }
+.fudo-icon-btn { display: grid; place-items: center; border: 1px solid var(--fudo-border); border-radius: 9px; background: #fff; width: 35px; height: 35px; color: var(--fudo-primary); }
+.fudo-faq details { padding: 15px 0; border-bottom: 1px solid var(--fudo-border); }
+.fudo-faq details:last-child { border-bottom: 0; }
+.fudo-faq summary { font-weight: 650; cursor: pointer; }
+.fudo-faq details p { margin: 10px 0 0; color: var(--fudo-muted); }
+.fudo-tickets li { display: flex; gap: 12px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--fudo-border); padding: 13px 0; }
+.fudo-tickets li:last-child { border-bottom: 0; }
+.fudo-tickets li > div { display: flex; flex-direction: column; }
+.fudo-tickets small { color: var(--fudo-muted); }
+.fudo-tag { font-size: 12px; color: var(--fudo-primary); padding: 4px 8px; background: var(--fudo-tint); border-radius: 20px; white-space: nowrap; }
+.fudo-about-icon { display: grid; place-items: center; width: 55px; height: 55px; background: var(--fudo-tint); color: var(--fudo-primary); border-radius: 16px; margin-bottom: 15px; }
+.fudo-about p { color: var(--fudo-muted); }
+.fudo-link-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.fudo-link-card { display: flex; flex-direction: column; padding: 24px; gap: 7px; background: white; border: 1px solid var(--fudo-border); border-radius: 16px; color: var(--fudo-text) !important; }
+.fudo-link-card:hover { text-decoration: none !important; border-color: var(--fudo-primary); }
+.fudo-link-card svg { color: var(--fudo-primary); margin-bottom: 6px; }
+.fudo-link-card span { font-size: 13px; color: var(--fudo-muted); }
+.fudo-document h2 { margin: 28px 0 9px; }
+.fudo-document p { line-height: 1.8; }
+@media (max-width: 760px) {
+ .fudo-main { padding: 24px 14px 55px; }
+ .fudo-topbar-inner { padding: 12px 16px; }
+ .fudo-toplinks { gap: 12px; }
+ .fudo-toplink { font-size: 13px; }
+ .fudo-settings-layout { grid-template-columns: 1fr; gap: 22px; }
+ .fudo-side { padding: 17px 12px; }
+ .fudo-nav { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 3px; }
+ .fudo-nav-link { font-size: 13px; padding: 10px; }
+ .fudo-panel { padding: 20px; }
+ .fudo-auth-card { padding: 26px 22px; margin: 0 auto; }
+ .fudo-link-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 390px) {
+ .fudo-toplink:first-child { display: none; }
+ .fudo-side h2 { padding: 0 8px 12px; }
+ .fudo-nav-link { gap: 7px; }
+}
+
+.fudo-confirm { position: fixed; z-index: 30; inset: auto 20px 30px auto; width: min(365px, calc(100vw - 40px)); background: var(--fudo-surface); border: 1px solid var(--fudo-border); border-radius: 16px; box-shadow: 0 15px 60px rgba(20,45,26,.2); padding: 22px; }
+.fudo-confirm strong { font-size: 17px; }
+.fudo-confirm p { color: var(--fudo-muted); margin: 6px 0 18px; }
+.fudo-confirm-buttons { display: flex; gap: 10px; }
+.fudo-confirm-buttons form, .fudo-confirm-buttons button { flex: 1; }
+.fudo-btn-outline { background: white; color: var(--fudo-text); border: 1px solid var(--fudo-border); }
+.fudo-btn-danger { color: white; background: #bd3a3a; }
+.fudo-btn-danger:hover { background: #9d2626; }

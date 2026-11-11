@@ -1,0 +1,143 @@
+.home {overflow: hidden; background: #fdfbf3; color: #103c2d}
+.home a {text-decoration: none}
+.hero {display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(20px, 6vw, 95px); align-items: center; padding-top: 64px; padding-bottom: 72px; min-height: 558px}
+.heroCopy {padding: 15px 0}
+.eyebrowPill {display: inline-flex; gap: 7px; align-items: center; border-radius: 30px; padding: 7px 12px; color: #357e4e; background: #e8f6e5; letter-spacing: .075em; font-size: 10px; font-weight: 800; text-transform: uppercase}
+.liveDot {width: 8px; height: 8px; border-radius: 50%; background: #27934b; box-shadow: 0 0 0 3px #c8e9c9}
+.hero h1 {font-size: clamp(43px, 5.4vw, 76px); line-height: 1.065; letter-spacing: -.065em; font-weight: 850; margin: 27px 0 21px; white-space: nowrap}
+.hero h1 span {color: #258748}
+.heroCopy > p {font-size: clamp(14px, 1.28vw, 17px); color: #7b8a7c; line-height: 1.75; max-width: 500px; margin: 0}
+.heroButtons {display: flex; gap: 24px; align-items: center; margin-top: 32px; flex-wrap: wrap}
+.btnPrimary {display: inline-flex; align-items: center; gap: 12px; justify-content: center; padding: 14px 22px; border-radius: 99px; background: #25864b; color: #fff; box-shadow: 0 7px 16px #25864b24; font-size: 13px; font-weight: 800; transition: transform .16s, background .16s}
+.btnPrimary:hover {background: #17643b; transform: translateY(-1px)}
+.textLink {display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 800}
+.textLink:hover {color: #25864b}
+.heroBenefits {margin-top: 34px; display: flex; flex-wrap: wrap; gap: 22px; font-size: 12px; font-weight: 650; color: #718275}
+.heroBenefits span {display: inline-flex; gap: 6px; align-items: center}
+.heroBenefits svg {color: #26934d; background: #e4f5dd; padding: 2px; border-radius: 50%; width: 17px; height: 17px}
+.heroVisual {height: 470px; min-width: 0; position: relative; border-radius: 42px; overflow: visible; background: linear-gradient(130deg,#d9f1d7 0%, #e2f5d6 48%, #c9e5c8 100%)}
+.heroVisualCircle {position: absolute; border: 1px solid #ffffff65; border-radius: 50%; inset: 46px 54px; background: radial-gradient(circle, #edf9e5 0%, #e1f4d8 73%, #e7f5da 100%)}
+.heroSun {position: absolute; top: 35px; right: 34px; font-size: 44px; color: #ffb12d}
+.heroSparkle {position: absolute; bottom: 40px; left: 28px; font-size: 27px; color: #ffa923}
+.floatNote {position: absolute; top: 54px; left: -30px; transform: rotate(-7deg); display: flex; gap: 8px; align-items: center; padding: 11px 13px; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px #24633c1f; z-index: 3}
+.floatNote > span:first-child {font-size: 21px}
+.floatNote strong,.floatNote small {display: block; font-size: 11px; line-height: 1.35}
+.floatNote small {color: #879488; font-size: 9px}
+.heroProductCard {width: min(60%,260px); position: absolute; left: 24%; top: 8%; transform: rotate(8deg); border-radius: 19px; border: 5px solid #fff; background: #fff; box-shadow: 0 25px 38px #284f3929; overflow: hidden; padding: 8px}
+.heroProductTop {height: 44px; background: #fff4d8; display: flex; justify-content: space-between; align-items: center; padding: 4px 14px; color: #aa8132; font-weight: 800; font-size: 12px}
+.heroProductTop span:last-child {font-size: 24px; color: #b6baa9; font-weight: 400}
+.heroFood {height: 214px; display: grid; place-items: center; font-size: 113px; background: radial-gradient(circle,#f8f3d2 0,#f7ebc4 75%)}
+.heroProductDetails {padding: 14px 10px 12px; background: white}
+.heroProductDetails small {display: block; color: #a0b19d; font-size: 11px}
+.heroProductDetails > strong {display: block; margin-top: 2px; font-size: 21px; letter-spacing: -.03em}
+.heroProductDetails div {display: flex; align-items: center; gap: 6px; margin-top: 7px}
+.heroProductDetails b {font-size: 21px}
+.heroProductDetails del {font-size: 9px; color: #a7aba4}
+.heroProductDetails div span {margin-left: auto; background: #fff0e0; border-radius: 7px; padding: 5px; color: #e18c5b; font-size: 11px; font-weight: 800}
+.floatSuccess {position: absolute; right: -20px; bottom: 42px; display: flex; gap: 9px; align-items: center; padding: 9px 12px; transform: rotate(5deg); border-radius: 9px; background: white; box-shadow: 0 8px 23px #214e3521; z-index: 3}
+.floatSuccess > span {width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; color: white; background: #37a75f}
+.floatSuccess strong,.floatSuccess small {display: block; font-size: 10px}
+.floatSuccess small {color: #8b988b; font-size: 8px}
+.offersSection {background: #f3f8f1; padding: 82px 0 95px; scroll-margin-top: 80px}
+.sectionLabel {color: #218747; text-transform: uppercase; font-weight: 850; font-size: 11px; letter-spacing: .15em; margin-bottom: 14px}
+.titleRow {display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 26px}
+.titleRow h2,.centerHeading h2 {font-size: clamp(28px,3.15vw,43px); letter-spacing: -.05em; line-height: 1.1; margin: 0 0 12px}
+.titleRow p, .centerHeading p {font-size: 14px; color: #7f8f80; line-height: 1.6; margin: 0}
+.orangeStar {color: #ffa826; font-size: .75em}
+.updateBadge {white-space: nowrap; display: inline-block; padding: 10px 17px; border-radius: 30px; font-size: 11px; font-weight: 700; background: white; color: #819181}
+.searchBox {display: flex; align-items: center; gap: 12px; padding: 0 17px; width: 100%; height: 58px; background: #fff; border: 1px solid #e2e8e1; border-radius: 13px; color: #8a9c8d; box-shadow: 0 6px 22px #1e462b05}
+.searchBox:focus-within {border-color: #3d9c66; box-shadow: 0 0 0 3px #3d9c6625}
+.searchBox input {outline: none; border: 0; background: transparent; color: #153d2a; flex: 1; min-width: 0; height: 100%; font-size: 13px}
+.searchBox input::placeholder {color: #a5b1a5}
+.filterBar {display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px}
+.filter, .filterActive {border-radius: 50px; border: 1px solid #e5ece4; min-height: 36px; padding: 8px 15px; background: white; color: #536b5a; font-size: 12px; font-weight: 700; cursor: pointer}
+.filterActive {background: #123e2c; color: white; border-color: #123e2c}
+.filter:hover {border-color: #9cbea6; background: #f8fcf7}
+.resultsHeader {display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; gap: 12px; font-size: 14px; font-weight: 800}
+.count {display: inline-block; min-width: 21px; padding: 2px 6px; border-radius: 50%; color: #348a54; background: #e3efe3; font-size: 10px; text-align: center}
+.demoHint {font-size: 11px; font-weight: 500; color: #9aa99a}
+.offersGrid {display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 19px}
+.offerCard {background: white; border-radius: 20px; border: 1px solid #e9eee8; overflow: hidden; box-shadow: 0 9px 21px #1f472d08; transition: transform .18s,box-shadow .18s}
+.offerCard:hover {transform: translateY(-2px);box-shadow: 0 13px 31px #1f472d14}
+.offerImage {height: 202px; position: relative; display: grid; place-items: center; overflow: hidden}
+.peach {background: #fee0ce}.lavender {background: #e8dcfa}.mint {background: #d6efdf}.butter {background: #fff0bf}.rose {background: #f7dbd8}.sand {background: #f3e2d0}
+.discount {position: absolute; top: 15px; left: 15px; z-index: 1; background: #124b33; color: white; padding: 7px 10px; border-radius: 12px; font-size: 12px; font-weight: 800}
+.emojiDisc {height: 154px; width: 154px; display: grid; place-items: center; border-radius: 50%; background: #ffffff85; font-size: 87px; line-height: 1; filter: drop-shadow(0 5px 4px #735e4930)}
+.star {position: absolute; top: 20px; right: 22px; color: white; font-size: 30px}
+.categoryPill {position: absolute; left: 15px; bottom: 12px; background: white; padding: 5px 11px; border-radius: 30px; font-size: 10px; font-weight: 700; color: #59725e}
+.offerInfo {padding: 19px 17px 17px}
+.vendor {display: block; color: #319056; font-size: 10px; font-weight: 750; margin-bottom: 5px}
+.offerInfo h3 {font-size: clamp(16px,1.6vw,19px); letter-spacing: -.03em; line-height: 1.22; margin: 0 0 8px}
+.offerInfo > p {font-size: 11px; color: #8c9a8c; margin: 0; padding-bottom: 21px; min-height: 37px}
+.offerBottom {display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 15px; border-top: 1px solid #edf1eb}
+.offerBottom > div {display: flex; align-items: baseline; gap: 8px}
+.offerBottom strong {font-size: 21px; color: #173e2e}
+.offerBottom del {color: #a4afa5; font-size: 11px}
+.offerGo {display: grid; width: 39px; height: 39px; place-items: center; background: #e1f3e0; color: #258e4c; border-radius: 50%}
+.offerGo:hover {background: #cbeacb}
+.catalogDisclaimer,.reviewDisclaimer {margin: 23px 0 0; font-size: 11px; color: #97a497; line-height: 1.65}
+.emptyState {text-align: center; border: 1px dashed #abc6ae; border-radius: 20px; padding: 35px; color: #406e4e}
+.emptyState h3 {margin: 11px 0 5px}
+.emptyState p {color: #829581; font-size: 13px}
+.emptyState button {border: none; background: #24844d; color: white; border-radius: 30px; padding: 10px 15px; font-weight: 700; cursor: pointer}
+.howSection {padding-top: 110px; padding-bottom: 100px; scroll-margin-top: 95px}
+.centerHeading {text-align: center}
+.stepsGrid {display: grid; grid-template-columns: 1fr 100px 1fr 100px 1fr; align-items: center; gap: 0; margin-top: 64px}
+.stepItem {text-align: center; display: flex; flex-direction: column; align-items: center; padding-inline: 10px}
+.stepIcon {width: 113px; height: 113px; display: grid; place-items: center; border-radius: 27px; transform: rotate(-9deg); margin-bottom: 24px; color: #508b76}
+.stepIcon svg {transform: rotate(9deg)}
+.greenIcon {background: #e0f3dc}.yellowIcon {background: #ffefc5}.pinkIcon {background: #fae2dd}
+.stepItem > span {font-size: 10px; letter-spacing: .18em; font-weight: 850; color: #289753}
+.stepItem h3 {font-size: 19px; margin: 7px 0 8px}
+.stepItem p {font-size: 13px; line-height: 1.6; color: #92a192; max-width: 245px; margin: 0}
+.stepArrow {color: #abd2ac; font-size: 23px; letter-spacing: 5px; text-align: center; transform: translateY(-6px)}
+.groupBanner {position: relative; display: flex; min-height: 390px; padding: 57px 65px; border-radius: 31px; background: radial-gradient(ellipse at 89% 53%,#246444, #103f2e 62%); color: white; overflow: hidden}
+.groupCopy {position: relative; z-index: 2; width: 58%; padding-right: 20px}
+.bannerEyebrow {font-size: 11px; letter-spacing: .17em; text-transform: uppercase; font-weight: 850; color: #94c692}
+.groupCopy h2 {font-size: clamp(30px,3.5vw,49px); line-height: 1.09; letter-spacing: -.055em; margin: 18px 0 15px}
+.groupCopy h2 span {color: #a1d48c}
+.groupCopy p {max-width: 460px; color: #c4d6c6; line-height: 1.65; font-size: 14px; margin: 0 0 24px}
+.whiteButton {display: inline-flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 850; color: #17412d; background: white; border-radius: 30px; padding: 13px 18px}
+.whiteButton:hover {background: #ebf6e3}
+.groupCopy > small {display: block; margin-top: 17px; font-size: 10px; color: #8db7a1}
+.groupArt {position: absolute; right: 35px; inset-block: 0; width: 40%}
+.pizza {font-size: 142px; position: absolute; top: 33px; left: 13%; transform: rotate(-20deg); filter: drop-shadow(0 16px 12px #0002)}
+.orderNote {position: absolute; bottom: 23px; right: 11%; width: 265px; padding: 17px 20px; border-radius: 17px; background: white; transform: rotate(7deg); color: #17412d; box-shadow: 0 16px 22px #0002}
+.orderNote > div:first-child {display: flex; justify-content: space-between; gap: 3px; font-size: 13px}
+.avatars {display: flex; align-items: center; margin: 12px 0 4px}
+.avatars i {font-style: normal; display: grid; place-items: center; background: #d7efda; color: #227f4a; border: 2px solid white; width: 27px; height: 27px; border-radius: 50%; font-size: 10px; font-weight: 850; margin-right: -5px}
+.orderNote small {font-size: 10px; color: #76977b}
+.progress {width: 100%; height: 6px; border-radius: 50px; background: #d5eed9; overflow: hidden; margin: 8px 0}
+.progress span {width: 65%; height: 100%; display: block; background: #399c5a}
+.bannerStar {font-size: 30px; position: absolute; right: 46%; top: 31px; color: #ffae26}
+.reviews {padding-top: 110px; padding-bottom: 95px; scroll-margin-top: 85px}
+.softButton {display: inline-flex; align-items: center; gap: 10px; border-radius: 30px; background: #e9f3e8; color: #1b5935; padding: 12px 18px; white-space: nowrap; font-size: 12px; font-weight: 800}
+.softButton:hover {background: #d4eacb}
+.reviewGrid {display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px}
+.reviewCard {background: #fff; border: 1px solid #e6eee5; border-radius: 20px; padding: 25px; min-height: 230px; display: flex; flex-direction: column; box-shadow: 0 5px 18px #00000004}
+.stars {display: flex; gap: 2px; align-items: center; color: #ffad29}
+.stars svg {width: 14px; height: 14px; fill: currentColor}
+.stars span {font-size: 35px; margin-left: auto; color: #d3eed0}
+.reviewCard blockquote {margin: 15px 0 24px; font-size: 13px; color: #627568; line-height: 1.7; flex: 1}
+.reviewer {display: flex; align-items: center; gap: 10px}
+.reviewer > span {width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: #dcefdc; color: #228148; font-size: 13px; font-weight: 800}
+.reviewer strong,.reviewer small {display: block}
+.reviewer strong {font-size: 11px}.reviewer small {font-size: 10px; color: #a0ad9f}
+.bottomCta {display: flex; justify-content: space-between; align-items: center; gap: 18px; background: #e3f3db; border-radius: 24px; padding: 32px 35px; margin-bottom: 80px}
+.bottomCta span {display: block; color: #3b9556; font-size: 11px; font-weight: 850; margin-bottom: 8px}
+.bottomCta h2 {font-size: clamp(22px,2.7vw,33px); letter-spacing: -.04em; margin: 0}
+.footer {background: #0d3426; color: white; padding: 66px 0 25px}
+.footerColumns {display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 46px; margin-bottom: 70px}
+.footerColumns h3 {font-size: 12px; margin: 5px 0 20px; color: #f0f7ec}
+.footerColumns > div:not(:first-child) a {display: block; margin-bottom: 13px; font-size: 11px; color: #c0d3c4}
+.footerColumns a:hover {color: white}
+.footerColumns p {color: #abc9b2; font-size: 12px; line-height: 1.65; margin: 0 0 15px}
+.footerBrand a {display: inline-flex; width: 125px; overflow: hidden}
+.footerBrand img {height: auto; width: 100%}
+.footerBrand p {margin-top: 22px}
+.footerBrand strong {font-size: 11px; color: #fff}
+.footerBottom {border-top: 1px solid #2b5040; padding-top: 23px; display: flex; justify-content: space-between; gap: 15px; color: #86a394; font-size: 10px}
+@media(max-width: 1120px){.hero {gap: 32px}.hero h1 {font-size: clamp(40px,5.1vw,64px)}.heroVisual {height: 402px}.heroFood {height: 169px;font-size: 97px}.heroProductTop {height: 35px}.heroProductDetails {padding: 8px}.heroProductDetails > strong {font-size: 17px}.heroProductDetails b {font-size: 16px}.heroBenefits {gap: 11px}.heroProductCard {width: min(62%,230px)}.stepsGrid {grid-template-columns: 1fr 55px 1fr 55px 1fr}}
+@media(max-width: 800px){.hero {grid-template-columns: 1fr; padding-top: 52px; padding-bottom: 65px; gap: 32px}.heroCopy {text-align: center}.heroCopy > p {margin-inline: auto}.heroButtons,.heroBenefits {justify-content: center}.heroVisual {width: min(520px,88%); margin-inline: auto; height: 430px}.offersGrid {grid-template-columns: repeat(2,minmax(0,1fr))}.offerImage {height: 190px}.groupCopy {width: 65%}.groupArt {right: -58px}.pizza {font-size: 113px}.orderNote {width: 220px}.footerColumns {grid-template-columns: repeat(2,1fr); gap: 35px}.reviewGrid {gap: 12px}.reviewCard {padding: 19px}.stepsGrid {gap: 5px;grid-template-columns: 1fr 1fr 1fr}.stepArrow {display:none}}
+@media(max-width: 580px){.hero {padding-top: 34px; padding-bottom: 48px}.heroCopy {text-align: left}.eyebrowPill {font-size: 8px}.hero h1 {font-size: clamp(36px,10.8vw,55px); letter-spacing: -.055em; margin: 21px 0 14px}.heroCopy > p {font-size: 13px; line-height: 1.65}.heroButtons,.heroBenefits {justify-content: flex-start}.heroButtons {gap: 18px; margin-top: 23px}.heroBenefits {gap: 12px; font-size: 10px; margin-top: 24px}.btnPrimary {font-size: 12px; padding: 12px 15px}.textLink {font-size: 11px}.heroVisual {height: 295px; width: 100%; border-radius: 24px}.heroVisualCircle {inset: 31px 30px}.heroSun {font-size: 31px;right: 18px;top: 15px}.heroProductCard {max-width: 183px; width: 52%; left: 27%; top: 6%; border-width: 4px; padding: 4px;border-radius:12px}.heroFood {height: 123px;font-size: 73px}.heroProductTop {height: 28px; font-size: 8px}.heroProductDetails {padding: 6px}.heroProductDetails > strong {font-size: 13px}.heroProductDetails b {font-size: 13px}.heroProductDetails small {font-size: 8px}.heroProductDetails del {display: none}.heroProductDetails div span {font-size: 8px;padding:3px}.floatNote {top: 36px;left: -7px;padding: 7px}.floatNote strong {font-size: 8px}.floatNote small {font-size: 7px}.floatNote > span:first-child {font-size: 14px}.floatSuccess {right: -5px;bottom: 18px; padding: 6px}.floatSuccess strong {font-size: 8px}.floatSuccess small {font-size: 7px}.floatSuccess > span {width:20px;height:20px;font-size:9px}.offersSection {padding: 51px 0 65px}.sectionLabel {font-size: 9px;margin-bottom: 9px}.titleRow {align-items: start; margin-bottom: 19px}.titleRow h2,.centerHeading h2 {font-size: clamp(25px,7vw,34px)}.titleRow p,.centerHeading p {font-size: 11px}.updateBadge {display: none}.searchBox {height: 48px}.searchBox input {font-size: 11px}.filterBar {flex-wrap: nowrap; overflow-x: auto; gap: 7px; margin: 14px -14px 20px; padding: 0 14px 3px; scrollbar-width: none}.filter, .filterActive {white-space: nowrap; font-size: 10px; min-height: 32px; padding: 7px 11px}.resultsHeader {font-size: 12px}.demoHint {font-size: 9px; max-width: 110px; text-align: right}.offersGrid {grid-template-columns: 1fr; gap: 14px}.offerImage {height: 206px}.emojiDisc {width: 138px;height: 138px;font-size: 80px}.offerInfo h3 {font-size: 18px}.offerInfo {padding: 15px}.offerInfo > p {padding-bottom: 13px}.catalogDisclaimer {font-size: 10px}.howSection {padding-top: 65px; padding-bottom: 62px}.stepsGrid {grid-template-columns: 1fr; gap: 37px; margin-top: 38px}.stepIcon {width: 85px;height: 85px;margin-bottom: 14px;border-radius:19px}.stepIcon svg {width: 32px;height: 32px}.stepItem h3 {font-size: 17px}.stepItem p {font-size: 12px}.groupBanner {min-height: 550px; padding: 30px 24px; border-radius: 24px; flex-direction: column}.groupCopy {width: 100%;padding:0}.groupCopy h2 {font-size: clamp(29px,8vw,41px)}.groupCopy p {font-size: 12px;max-width:360px}.groupCopy > small {max-width:220px}.groupArt {width:100%;right:0;top:auto;bottom:0;height: 245px}.pizza {font-size: 100px;top: -3px;left: 16%}.orderNote {width: 205px;right: 8%;bottom: 15px; padding: 13px}.bannerStar {font-size:20px;top:10px;right:20%}.reviews {padding: 65px 0}.reviews .titleRow {display: block}.softButton {margin-top: 16px}.reviewGrid {grid-template-columns: 1fr;gap: 13px}.reviewCard {min-height: 165px}.reviewCard blockquote {margin: 9px 0 18px}.bottomCta {display: flex;align-items:flex-start;flex-direction:column;padding:25px 20px;border-radius:18px;margin-bottom:60px}.bottomCta h2 {font-size: 23px}.footer {padding-top: 44px}.footerColumns {grid-template-columns: 1fr 1fr;gap: 32px 17px;margin-bottom:38px}.footerBrand {grid-column: 1 / -1}.footerColumns h3 {font-size:11px}.footerBottom {font-size: 9px; flex-direction: column}}
+@media(max-width: 380px){.heroBenefits {gap: 8px}.heroBenefits span {font-size: 9px}.groupBanner {min-height: 565px}.emojiDisc {height: 123px;width: 123px}}

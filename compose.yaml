@@ -1,0 +1,20 @@
+# Optional local-only PostgreSQL for students with Docker installed.
+services:
+  fudo-postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fudo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - fudo_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fudo"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+volumes:
+  fudo_pgdata:
